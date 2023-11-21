@@ -64,7 +64,7 @@ function ModeratorRoute() {
     formDataToSend.append('googleLink', formData.googleLink);
 
     try {
-      const response = await fetch('http://localhost:3001/sunset/api/admin/put/1', {
+      const response = await fetch('https://sunsetapi.bio/sunset/api/admin/put/1', {
         method: 'PUT',
         body: formDataToSend
       });
@@ -100,7 +100,7 @@ function ModeratorRoute() {
       const formData = new FormData();
       formData.append('image', file);
 
-      const response = await fetch('http://localhost:3001/gallery/', {
+      const response = await fetch('https://sunsetapi.bio/gallery/', {
         method: 'POST',
         body: formData,
       });
@@ -155,7 +155,7 @@ function ModeratorRoute() {
   const disabledDates = getAllDatesBetweenReservations(reservations)
 
   async function fetchReservations() {
-    await fetch('http://localhost:3001/reservation/')
+    await fetch('https://sunsetapi.bio/reservation/')
       .then((res) => res.json())
       .then((response) => {
         setReservations(response)
@@ -167,7 +167,7 @@ function ModeratorRoute() {
 
   const deleteImage = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3001/gallery/${id}`, {
+      const response = await fetch(`https://sunsetapi.bio/gallery/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -280,7 +280,7 @@ function ModeratorRoute() {
                   <h3 style={{ width: 'calc(100% / 8)', minWidth: 150 }} className='p-2 flex text-xs items-center gap-2'><IoPricetagOutline size={21} /> {
                     (moment(reservation.resEndDate).diff(moment(reservation.resStartDate), 'days') * 250).toLocaleString(void 0, { maximumFractionDigits: 2 })
                   } EUR</h3>|
-                  <a href={`http://localhost:3001/upload/${reservation.advancePayment}`} target='_blank' className='p-2 rounded-full bg-white mx-3'><AiOutlineEye color='#132547' size={22} /></a>
+                  <a href={`https://sunsetapi.bio/upload/${reservation.advancePayment}`} target='_blank' className='p-2 rounded-full bg-white mx-3'><AiOutlineEye color='#132547' size={22} /></a>
                 </div>
               )
             }) : null
@@ -301,7 +301,7 @@ function ModeratorRoute() {
               hidden
               onChange={handleHomeFileChange}
             />
-            <img onClick={handleImageClick} style={{ height: 300, cursor: 'pointer', pointerEvents: 'auto', userSelect: 'auto' }} src={`http://localhost:3001/upload/${homeDetails.map((m) => m.aboutImage)}`} alt="" />
+            <img onClick={handleImageClick} style={{ height: 300, cursor: 'pointer', pointerEvents: 'auto', userSelect: 'auto' }} src={`https://sunsetapi.bio/upload/${homeDetails.map((m) => m.aboutImage)}`} alt="" />
           </div>
           <div className="links flex items-center mb-3 gap-3">
             <div style={{ backgroundColor: '#0B1832', width: 'calc(100% / 3)' }} className="link-card instaLink flex items-center gap-2 p-3">
@@ -330,7 +330,7 @@ function ModeratorRoute() {
             gallery.map((imgs) => {
               return (
                 <div style={{ width: 'calc(100% / 5 - 5px)', maxHeight: 250, backgroundColor: '#132547' }} className='relative flex items-center justify-center'>
-                  <img className='h-full' src={`http://localhost:3001/upload/${imgs.url}`} alt="" />
+                  <img className='h-full' src={`https://sunsetapi.bio/upload/${imgs.url}`} alt="" />
                   <button onClick={() => deleteImage(imgs.id)} style={{ width: 30, height: 30 }} className='absolute top-2 right-2 bg-blue-900 text-white flex items-center justify-center'><MdDeleteOutline size={20} /></button>
                 </div>
               )

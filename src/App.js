@@ -11,7 +11,9 @@ function App() {
   return (
     <BrowserRouter>
       <ApplicationProvider>
-        <AppERouter />
+        <Routes>
+          <Route path='/*' element={<AppERouter />} />
+        </Routes>
       </ApplicationProvider>
     </BrowserRouter>
   )
