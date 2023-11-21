@@ -1,13 +1,70 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-screen {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navigation-bar nav {  
+  color: #FFCF73;
+  transition: left 0.5s ease-in-out;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 35px;
+  }
+  .footer img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation-bar {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  .navigation-bar nav {
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 80px;
+    z-index: 99999;
+    background-color: #0B1832;
+    padding: 20px;
+  }
+  .menu-button {
+    display: block;
+  }
 }

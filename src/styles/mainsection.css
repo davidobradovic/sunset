@@ -1,0 +1,24 @@
+@media(max-width: 755px){
+    .main-section {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    .text-container, .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 80%;
+        margin-bottom: 100px
+    }
+    .weather-container {
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .list-of-images img {
+        min-width: 100% !important;
+    }
+}
