@@ -12,7 +12,7 @@ export const ApplicationProvider = ({ children }) => {
     const [ isUserAuthed, setIsUserAuthed ] = useState(null)
 
     async function fetchHomeDetails() {
-        await fetch('https://sunsetapi.bio/sunset/api/admin')
+        await fetch('https://api.sunsetapi.bio/sunset/api/admin')
             .then((res) => res.json())
             .then((response) => {
                 setHomeDetails(response)
@@ -23,7 +23,7 @@ export const ApplicationProvider = ({ children }) => {
     }
 
     async function fetchReservations() {
-        await fetch('https://sunsetapi.bio/reservation/')
+        await fetch('https://api.sunsetapi.bio/reservation/')
             .then((res) => res.json())
             .then((response) => {
                 setReservations(response)
@@ -34,7 +34,7 @@ export const ApplicationProvider = ({ children }) => {
     }
 
     async function fetchGallery() {
-        await fetch('https://sunsetapi.bio/gallery/')
+        await fetch('https://api.sunsetapi.bio/gallery/')
             .then((res) => res.json())
             .then((response) => {
                 setGallery(response)

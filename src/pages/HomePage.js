@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom'
 
 function HomePage() {
     
-    // https://sunsetapi.bio/upload/
+    // https://api.sunsetapi.bio/upload/
 
     const [lat, setLat] = useState([]);
     const [long, setLong] = useState([]);
@@ -64,7 +64,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="image-container flex items-center justify-center w-1/2">
-                    <img style={{ borderColor: '#FFCF73', width: '50%', height: 'calc(auto + 10px)', minWidth: 350 }} className='w-1/2 rounded-full border-4' src={`https://sunsetapi.bio/upload/${homeDetails.map((m) => m.aboutImage)}`} alt="" />
+                    <img style={{ borderColor: '#FFCF73', width: '50%', height: 'calc(auto + 10px)', minWidth: 350 }} className='w-1/2 rounded-full border-4' src={`https://api.sunsetapi.bio/upload/${homeDetails.map((m) => m.aboutImage)}`} alt="" />
                 </div>
                 <div style={{ gap: '5%' }} className="weather-container flex items-center justify-center absolute bottom-10 w-full ">
                     {data && data.main ? (
@@ -111,7 +111,7 @@ function HomePage() {
                     {
                         gallery.map((imgs) => {
                             return (
-                                <img style={{ width: 'calc(100% / 5 - 5px)', minWidth: 250, height: 'auto' }} src={`https://sunsetapi.bio/upload/${imgs.url}`} alt="" />
+                                <img style={{ width: 'calc(100% / 5 - 5px)', minWidth: 250, height: 'auto' }} src={`https://api.sunsetapi.bio/upload/${imgs.url}`} alt="" />
                             )
                         })
                     }

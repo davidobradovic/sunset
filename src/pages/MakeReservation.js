@@ -70,7 +70,7 @@ function MakeReservation() {
         formDataToSend.append('resPrice', formData.resPrice);
 
         try {
-            const response = await axios.post('https://sunsetapi.bio/reservation', formDataToSend);
+            const response = await axios.post('https://api.sunsetapi.bio/reservation', formDataToSend);
             if(response) {
                 toast.success('USPJESNO STE REZERVISALI SMJESTAJ!', {
                     position: "bottom-center",

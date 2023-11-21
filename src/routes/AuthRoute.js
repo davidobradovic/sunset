@@ -15,7 +15,7 @@ const AuthRoute = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://sunsetapi.bio/sunset/api/auth/login', { username, password });
+            const response = await axios.post('https://api.sunsetapi.bio/sunset/api/auth/login', { username, password });
             const token = response.data.token;
 
             // Store the token in localStorage or a secure storage method of your choice
