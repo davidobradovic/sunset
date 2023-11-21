@@ -225,6 +225,46 @@ function ModeratorRoute() {
 
   const sortedReservations = sortReservations(filteredReservations, sortType);
 
+  const deleteReservation = async (id) => {
+    try {
+      const response = await fetch(`https://api.sunsetapi.bio/reservation/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data)
+        toast.success('Uspjesno', {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        fetchGallery()
+      } else {
+        toast.error('Neuspjesno uploadanje slike', {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    } catch (error) {
+      console.error('Error deleting item:', error);
+    }
+  }
+
   useEffect(() => {
     fetchReservations()
     fetchGallery();
@@ -281,6 +321,7 @@ function ModeratorRoute() {
                     (moment(reservation.resEndDate).diff(moment(reservation.resStartDate), 'days') * 250).toLocaleString(void 0, { maximumFractionDigits: 2 })
                   } EUR</h3>|
                   <a href={`https://api.sunsetapi.bio/upload/${reservation.advancePayment}`} target='_blank' className='p-2 rounded-full bg-white mx-3'><AiOutlineEye color='#132547' size={22} /></a>
+                  <button onClick={() => deleteReservation(reservation.id)} className='p-2 rounded-full bg-white mx-3 text-red-400'><MdDeleteOutline size={22} /></button>
                 </div>
               )
             }) : null
