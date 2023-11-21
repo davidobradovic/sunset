@@ -31,7 +31,9 @@ function NavigationBar({ children }) {
             <main className='main-container'>
                 {children}
             </main>
-            
+            <footer className='p-1'>
+                <h1 className='text-sm text-gray-400'>website creator: <a href="https://www.instagram.com/__dado__777">Compas DAVID</a></h1>
+            </footer>
         </div>
     );
 }

@@ -19,7 +19,7 @@ export const ApplicationProvider = ({ children }) => {
             })
             .catch((e) => {
                 console.log(e)
-            })
+            })``
     }
 
     async function fetchReservations() {
