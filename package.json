@@ -17,6 +17,7 @@
     "draftjs-to-html": "^0.9.1",
     "flowbite": "^2.0.0",
     "jquery": "^3.7.1",
+    "lottie-react": "^2.4.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-calendar": "^4.6.1",
