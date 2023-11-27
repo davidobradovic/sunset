@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <App />
     <ToastContainer />
-    <Snowfall style={{ minHeight: '100vh' }} />
+    <Snowfall style={{ minHeight: '100vh', width: '100vw', position: 'fixed', left: 0, top: 0 }} />
   </React.StrictMode>
 );
 

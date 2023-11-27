@@ -6,6 +6,7 @@ import { ApplicationProvider, useAppData } from './context/AppProvider'
 import AppERouter from './AppERouter'
 import lotieAnim from './assets/lotieAnim.json'
 import Lottie from 'lottie-react';
+import Snowfall from 'react-snowfall';
 
 function App() {
   const [loading, setLoading] = useState(false);
