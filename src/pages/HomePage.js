@@ -121,7 +121,7 @@ function HomePage() {
                 <h1 className="title text-center font-bold uppercase py-3">Osnovne informacije</h1>
                 <div className="list-of-informations flex items-center justify-center gap-20 py-6">
                     <div style={{ width: 150, textAlign: 'center' }} className='flex flex-col items-center gap-3 '>
-                        <h1 className='flex items-center gap-2 text-sm'><FaPeopleRoof size={22} /> 15</h1>
+                        <h1 className='flex items-center gap-2 text-sm'><FaPeopleRoof size={22} /> 10</h1>
                         <p className='text-xs'>Broj osoba koje prima nasa vikendica</p>
                     </div>
                     <div style={{ width: 150, textAlign: 'center' }} className='flex flex-col items-center gap-3'>
