@@ -45,7 +45,7 @@ function HomePage() {
 
     return (
         <div>
-            <section style={{ minHeight: 'calc(100vh - 80px)' }} className="main-section flex items-center relative">
+            <section style={{ minHeight: 'calc(100vh - 90px)' }} className="main-section flex items-center relative">
                 <div className="text-container w-1/2 h-full flex flex-col items-start p-4 justify-center gap-5" style={{ color: '#FFCF73', }}>
                     <div className='w-full flex flex-col gap-3'>
                         <h1 className='font-bold text-4xl uppercase'>Dobrodošli u Sunset Jahorina!</h1>

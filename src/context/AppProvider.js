@@ -10,6 +10,7 @@ export const ApplicationProvider = ({ children }) => {
     const [reservations, setReservations] = useState([])
     const [gallery, setGallery] = useState([])
     const [ isUserAuthed, setIsUserAuthed ] = useState(null)
+    const [loading, setLoading] = useState(false);
 
     async function fetchHomeDetails() {
         await fetch('https://sunsetapi.bio/sunset/api/admin')
@@ -19,7 +20,7 @@ export const ApplicationProvider = ({ children }) => {
             })
             .catch((e) => {
                 console.log(e)
-            })``
+            })
     }
 
     async function fetchReservations() {
@@ -53,9 +54,17 @@ export const ApplicationProvider = ({ children }) => {
         setSelectedSubNav(i)
     }
 
+    async function loadingStatus () {
+        if(homeDetails.length > 1) {
+            setLoading(false)
+        } else {
+            setLoading(true)
+        }
+    }
 
 
     useEffect(() => {
+        loadingStatus()
         fetchHomeDetails()
         fetchReservations()
         fetchGallery()

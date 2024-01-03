@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import MainRoute from './routes/MainRoute';
 import ModeratorRoute from './routes/ModeratorRoute';
 import AuthRoute from './routes/AuthRoute';
 import { useAppData } from './context/AppProvider';
+import HomeRoute from './routes/HomeRoute';
+import ReservationRoute from './routes/ReservationRoute';
+import ContactRoute from './routes/ContactRoute';
 
 function AppERouter() {
     const { isUserAuthed } = useAppData();
@@ -15,7 +17,9 @@ function AppERouter() {
 
     return (
         <Routes>
-            <Route path='/*' element={<MainRoute />} />
+            <Route path='/' element={<HomeRoute />} />
+            <Route path='/rezervacija' element={<ReservationRoute />} />
+            <Route path='/kontakt' element={<ContactRoute />} />
             {isUserAuthed ? (
                 <Route path='/moderator' element={<ModeratorRoute />} />
             ) : (

@@ -1,0 +1,21 @@
+@media (max-width: 770px) {
+    .reservation-form {
+        width: 500px;
+        height: 80%;
+    }
+    .text-container h1 {
+        font-size: 16px;
+    }
+    .text-container p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 540px) {
+    .text-container {
+        width: 90%;
+    }
+    .reservation-form {
+        width: 90%;
+    }
+}

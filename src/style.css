@@ -1,0 +1,110 @@
+/* Home page */
+
+.galler-container::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.info-card:nth-child(1) {
+    background-image: linear-gradient(to left, rgba(1,1,1,0.5 ), rgba(255,255,255,0.5)) ,url('https://media.istockphoto.com/id/1401687750/photo/warm-hot-tub.jpg?s=612x612&w=0&k=20&c=etIpkEqco2DUiUdsD5bCSldqdJl6rjnGLDsrAg1CCIE=');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+}
+
+
+.info-card:nth-child(2) {
+    background-image: linear-gradient(to left, rgba(1,1,1,0.5 ), rgba(255,255,255,0.5)) ,url('https://www.fluidra.com/projects//web/app/uploads/2021/07/20-experiencia-wellness.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+}
+
+.info-card:nth-child(3) {
+    background-image: linear-gradient(to left, rgba(1,1,1,0.5 ), rgba(255,255,255,0.5)) ,url('https://telemach.ba/wp-content/uploads/2020/08/tp-link-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+}
+
+.info-card:nth-child(4) {
+    background-image: linear-gradient(to left, rgba(1,1,1,0.5 ), rgba(255,255,255,0.5)) ,url('https://media.product.which.co.uk/prod/images/1500_750/gm-3dea309c-dd4f-4a20-a9bc-31d0898b06a0-smarttv1-470080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+}
+
+
+.info-card h1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100,100,100,0.5);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    font-size: 18px;
+}
+
+@media(max-width: 1040px) {
+    .text-home h1{
+        font-size: 18px !important;
+    } 
+    .text-home p {
+        font-size: 11px !important;
+    }
+    .image-home, .image-home img {
+        min-width: 320px !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .about-section {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 0 !important;
+    }
+    .text-home {
+        width: 100% !important;
+    }
+    .image-home, .image-home img {
+        padding: 0;
+        width: 100% !important;
+    }
+    .weather-container {
+        width: 90%;
+    }
+    .galler-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .gallery-image {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .infos-container {
+        flex-direction: column;
+    }
+    .info-card {
+        width: 100%;
+    }
+}
+
+/* contact */
+@media (max-width: 740px) {
+    .buttons-contact {
+        flex-direction: column;
+    }
+    .buttons-contact a{
+        width: 100%;
+        font-size: 14px;
+    }
+}

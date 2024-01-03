@@ -275,8 +275,8 @@ function ModeratorRoute() {
     <div style={{ backgroundColor: '#0B1832', width: '100vw', minHeight: '100vh', color: 'white' }} className='p-3'>
       <h1 className='text-center py-3'>Administracija SUNSET</h1>
       <Calendar markedDates={disabledDates} />
-      {/* <div className='text-black flex items-start justify-center w-full gap-3'>
-        <Calendar
+      <div className='text-black flex items-start justify-center w-full gap-3'>
+        {/* <Calendar
           className=''
           onChange={handlePrevMonthChange}
         />
@@ -288,8 +288,8 @@ function ModeratorRoute() {
         <Calendar
           className=''
           onChange={handleNextMonthChange}
-        />
-      </div> */}
+        /> */}
+      </div>
       <div className="list-of-reservations p-3  mt-3" style={{ backgroundColor: '#0f1e3d' }}>
         <div className="header-lor overflow-auto flex items-center justify-between gap-5">
           <h1 className='text-sm'>Rezervacije</h1>
@@ -328,7 +328,7 @@ function ModeratorRoute() {
           }
         </div>
       </div>
-      <div className="homepage-details p-3  mt-3" style={{ backgroundColor: '#0f1e3d' }}>
+      {/* <div className="homepage-details p-3  mt-3" style={{ backgroundColor: '#0f1e3d' }}>
         <div className="header-hd mb-3 flex items-center justify-between">
           <h1 className='text-sm'>Pocetna stranica detalji</h1>
         </div>
@@ -361,7 +361,7 @@ function ModeratorRoute() {
           <button type='submit' className='w-full bg-blue-400 font-semibold text-black p-3'>SACUVAJ</button>
         </form>
 
-      </div>
+      </div> */}
       <div className="gallery p-3 mt-3 flex flex-col" style={{ backgroundColor: '#0f1e3d' }}>
         <div className="w-full header-hd mb-3 flex items-center justify-between">
           <h1 className='text-sm'>Galerija</h1>

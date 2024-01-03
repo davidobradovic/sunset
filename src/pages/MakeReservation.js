@@ -188,13 +188,13 @@ function MakeReservation() {
                     <input className='outline-none text-white w-full p-3 bg-transparent border-2 border-gray-700 rounded-xl' type='text' name="resName" id="" placeholder='Rezervacija na ime' onChange={(e) => setFormData({ ...formData, resName: e.target.value })} />
                     <input className='outline-none text-white w-full p-3 bg-transparent border-2 border-gray-700 rounded-xl mt-3' type='tel' name="resPhone" id="" placeholder='Broj telefona' onChange={(e) => setFormData({ ...formData, resPhone: e.target.value })} />
                     <input className='outline-none text-white w-full p-3 bg-transparent border-2 border-gray-700 rounded-xl mt-3' type='email' name="resEmail" id="" placeholder='Unesite email' onChange={(e) => setFormData({ ...formData, resEmail: e.target.value })} />
-                    {/* <Datepicker
+                    <Datepicker
                         inputClassName='outline-none w-full p-3 bg-transparent border-2 border-gray-700 rounded-xl text-white mt-3'
                         value={value}
                         name="date"
                         minDate={value.startDate}
                         onChange={handleValueChange}
-                    /> */}
+                    />
                     <div className="choose-dates flex items-center gap-2 mt-3">
                         <div className="rounded-md w-1/2">
                             <label className="block text-white text-xs p-2 rounded-xl" style={{ backgroundColor: '#0B1832' }} >
